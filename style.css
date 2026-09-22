@@ -1,0 +1,154 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Space+Grotesk:wght@500;700&display=swap");
+
+:root {
+  --ink: #1e293b;
+  --muted: #64748b;
+  --cream: #fffaf2;
+  --paper: #ffffff;
+  --line: #e7ddd0;
+  --accent: #d97706;
+  --accent-soft: #fff0d8;
+  --shadow: 0 18px 45px rgba(93, 64, 35, 0.1);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  color: var(--ink);
+  background:
+    radial-gradient(circle at 90% 5%, #ffe6bb 0, transparent 28rem),
+    var(--cream);
+  font-family: "DM Sans", sans-serif;
+}
+
+.halaman-produk {
+  width: min(100% - 40px, 760px);
+  margin: 0 auto;
+  padding: 72px 0 80px;
+}
+
+.hero {
+  max-width: 600px;
+  margin-bottom: 34px;
+}
+
+.label,
+.kategori {
+  margin: 0;
+  color: var(--accent);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+h1,
+h2 {
+  font-family: "Space Grotesk", sans-serif;
+}
+
+h1 {
+  margin: 12px 0 14px;
+  font-size: clamp(2.5rem, 7vw, 4.5rem);
+  letter-spacing: -0.06em;
+  line-height: 0.98;
+}
+
+.deskripsi {
+  margin: 0;
+  color: var(--muted);
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
+.daftar-produk {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.kartu-produk {
+  display: grid;
+  grid-template-columns: 76px 1fr;
+  gap: 20px;
+  width: 100%;
+  min-height: 170px;
+  margin: 0;
+  padding: 24px;
+  border: 2px solid var(--line);
+  border-radius: 20px;
+  background: var(--paper);
+  box-shadow: var(--shadow);
+  transition: border-color 180ms ease, transform 180ms ease;
+}
+
+.kartu-produk:hover {
+  border-color: #f2bd71;
+  transform: translateY(-3px);
+}
+
+.ikon-produk {
+  display: grid;
+  width: 76px;
+  height: 76px;
+  place-items: center;
+  border-radius: 18px;
+  background: var(--accent-soft);
+  font-size: 2.2rem;
+}
+
+.kartu-produk h2 {
+  margin: 7px 0 8px;
+  font-size: clamp(1.25rem, 3vw, 1.6rem);
+  line-height: 1.15;
+}
+
+.harga {
+  margin: 0 0 8px;
+  color: var(--accent);
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+.detail {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.92rem;
+  line-height: 1.5;
+}
+
+.catatan {
+  margin-top: 32px;
+  padding: 20px 24px;
+  border-left: 4px solid var(--accent);
+  background: #fff3df;
+  color: #854d0e;
+  line-height: 1.6;
+}
+
+.catatan p {
+  margin: 6px 0 0;
+}
+
+code {
+  padding: 2px 5px;
+  border-radius: 4px;
+  background: rgba(217, 119, 6, 0.12);
+  font-size: 0.9em;
+}
+
+@media (max-width: 520px) {
+  .halaman-produk {
+    width: min(100% - 28px, 760px);
+    padding-top: 48px;
+  }
+
+  .kartu-produk {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+}

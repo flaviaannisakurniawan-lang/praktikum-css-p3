@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Produk Pilihan | Box Model</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="halaman-produk">
+      <header class="hero">
+        <p class="label">PRAKTIK CSS · PERTEMUAN 3</p>
+        <h1>Produk Pilihan</h1>
+        <p class="deskripsi">
+          Contoh penerapan <em>box model</em> pada tiga kartu produk dengan
+          ukuran dan jarak yang konsisten.
+        </p>
+      </header>
+
+      <section class="daftar-produk" aria-label="Daftar produk">
+        <article class="kartu-produk">
+          <div class="ikon-produk" aria-hidden="true">☕</div>
+          <div>
+            <p class="kategori">Minuman</p>
+            <h2>Kopi Susu Gula Aren</h2>
+            <p class="harga">Rp18.000</p>
+            <p class="detail">Kopi arabika, susu segar, dan gula aren asli.</p>
+          </div>
+        </article>
+
+        <article class="kartu-produk">
+          <div class="ikon-produk" aria-hidden="true">📓</div>
+          <div>
+            <p class="kategori">Alat tulis</p>
+            <h2>Buku Catatan Linen</h2>
+            <p class="harga">Rp25.000</p>
+            <p class="detail">Kertas tebal 80 lembar dengan sampul yang kuat.</p>
+          </div>
+        </article>
+
+        <article class="kartu-produk">
+          <div class="ikon-produk" aria-hidden="true">🎧</div>
+          <div>
+            <p class="kategori">Elektronik</p>
+            <h2>Headphone Nirkabel</h2>
+            <p class="harga">Rp149.000</p>
+            <p class="detail">Suara jernih, nyaman dipakai, dan baterai tahan lama.</p>
+          </div>
+        </article>
+      </section>
+
+      <aside class="catatan">
+        <strong>Catatan Box Model</strong>
+        <p>
+          Setiap kartu memiliki <code>width: 100%</code>,
+          <code>padding: 24px</code>, border 2px, dan
+          <code>box-sizing: border-box</code>. Margin vertikal kartu yang
+          berdekatan dapat diamati melalui DevTools.
+        </p>
+      </aside>
+    </main>
+  </body>
+</html>
